@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
 import Typewriter from 'typewriter-effect';
-import myimage from '../img/11840.jpg';
+import myimage from '../img/assests/11840.jpg';
 const Header = () => {
     
     const [init, setInit] = useState(false);

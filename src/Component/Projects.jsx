@@ -71,7 +71,7 @@ const Projects = () => {
     title:"KORACOM WEB-SITE",
     description:"web-site by next.js for football news ",
     image:img9,
-    demoLink: "https://storestyles.netlify.app"
+    demoLink: "https://koralivecom.netlify.app"
   }
 ];
   return (

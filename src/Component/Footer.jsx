@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-2">
             <h5 className="text-uppercase text-center mb-4 font-weight-bold text-primary">Contact</h5>
             <div className=" d-flex justify-content-around mt-5">
-               <a href="https://www.linkedin.com/in/mohamed-sayed-0b59b3274" target="_blank" className="text-white ">
+               <a href="https://linkedin.com/in/mohamed-sayed-9203b1402" target="_blank" className="text-white ">
           <i className="fab fa-linkedin fa-2x" style={{ color: "#0077b5" }}></i>
           </a>
             <a href=" https://github.com/ms1701240-cell" target="_blank" className="text-white ">
@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="col-md-12 text-center">
             <p>
               Copyright ©2026 All rights reserved by: 
-              <strong className="text-primary"> Mohamed</strong>
+              <strong className="text-primary"> Mohamed Sayed</strong>
             </p>
           </div>
         </div>

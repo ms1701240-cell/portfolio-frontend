@@ -46,14 +46,14 @@ const SectionOne = () => {
             </div>
             <div className="col-12  d-flex justify-content-around">
              <a 
-  href="/CV.pdf" 
+  href="/portfolio-frontend/CV.pdf" 
   download="Mohamed_Sayed_CV.pdf" 
   className="btn btn-danger btn-lg rounded-pill px-4 shadow-sm fw-bold mt-4 "
 >
   Download CV
   </a>
           <a 
-  href="/MohamedSayedRESUME work.pdf" 
+  href="/portfolio-frontend/MohamedSayedResume.pdf" 
   download="MohamedSayedRESUME.pdf" 
   className="btn btn-danger btn-lg rounded-pill px-2 shadow-sm fw-bold mt-4"
 >

@@ -8,6 +8,7 @@ import img7 from '../img/assests/لقطة شاشة 2025-12-21 141918.png'
 import img8 from '../img/assests/Screenshot 2026-03-11 040029.png'
 import img9 from '../img/assests/Screenshot 2026-05-10 001013.png'
 import { image } from 'framer-motion/client'
+
 const Projects = () => {
     const projectsData = [
   {

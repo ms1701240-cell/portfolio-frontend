@@ -7,6 +7,7 @@ import img6 from '../img/assests/لقطة شاشة 2026-01-26 230308.png'
 import img7 from '../img/assests/لقطة شاشة 2025-12-21 141918.png'
 import img8 from '../img/assests/Screenshot 2026-03-11 040029.png'
 import img9 from '../img/assests/Screenshot 2026-05-10 001013.png'
+import img10 from '../img/assests/Screenshot 2026-06-25 230214.png'
 import { image } from 'framer-motion/client'
 
 const Projects = () => {
@@ -23,7 +24,7 @@ const Projects = () => {
     title: "MARKET",
     description: 'Market web site by used framework react.js',
     image: img2,
-    demoLink: "https://elegentstore.netlify.app/#"
+    demoLink: "https://momen-storefront.vercel.app"
   },
    {
     id: 3,
@@ -65,14 +66,21 @@ const Projects = () => {
     title: "Simple Store web-site by React.js",
     description: '"A modern E-commerce platform built with React.js and Tailwind CSS',
     image: img8,
-    demoLink: "https://storestyles.netlify.app"
+    demoLink: "https://ms1701240-cell.github.io/stylestore/#/home"
   },
   {
     id:9,
     title:"KORACOM WEB-SITE",
     description:"web-site by next.js for football news ",
     image:img9,
-    demoLink: "https://koralivecom.netlify.app"
+    demoLink: "https://kora-gamma-three.vercel.app"
+  },
+   {
+    id:10,
+    title:"E-Commerce Store WEB-SITE",
+    description:"web-site by next.js  ",
+    image:img10,
+    demoLink: "https://next-store-inky-tau.vercel.app"
   }
 ];
   return (

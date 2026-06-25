@@ -53,7 +53,7 @@ const SectionOne = () => {
   Download CV
   </a>
           <a 
-  href="/portfolio-frontend/MohamedSayedResume.pdf" 
+  href="/portfolio-frontend/MohamedSayedResume work.pdf" 
   download="MohamedSayedRESUME.pdf" 
   className="btn btn-danger btn-lg rounded-pill px-2 shadow-sm fw-bold mt-4"
 >

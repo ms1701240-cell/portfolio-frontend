@@ -49,7 +49,13 @@ const Skill = () => {
             iconClass: 'fa-solid fa-mobile-screen-button', 
             color: '#4caf50',
             description: 'Ensuring websites look great on all screen sizes.'
-        }
+        },
+        {
+            name: 'React Native',
+            iconClass: 'fa-solid fa-mobile-screen', // أو تقدر تستخدم أيقونة تانية مناسبة
+            color: '#61DAFB',
+            description: 'Building cross-platform mobile applications for Android and iOS using React.'
+        },
     ];
 
     return (

@@ -8,6 +8,7 @@ import img7 from '../img/assests/لقطة شاشة 2025-12-21 141918.png'
 import img8 from '../img/assests/Screenshot 2026-03-11 040029.png'
 import img9 from '../img/assests/Screenshot 2026-05-10 001013.png'
 import img10 from '../img/assests/Screenshot 2026-06-25 230214.png'
+import img11 from '../img/assests/Screenshot 2026-08-22 142209.png'
 import { image } from 'framer-motion/client'
 
 const Projects = () => {
@@ -81,6 +82,13 @@ const Projects = () => {
     description:"web-site by next.js  ",
     image:img10,
     demoLink: "https://next-store-inky-tau.vercel.app"
+  },
+   {
+    id:11,
+    title:"E-Commerce Store Application By React Native",
+    description:"Apllication build by React Native buy store with mobile application used nativewind libirary to improve UI desgin ",
+    image:img11,
+    demoLink: "https://lnkd.in/p/e6pkZF4b"
   }
 ];
   return (

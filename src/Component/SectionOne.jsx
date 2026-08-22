@@ -1,6 +1,6 @@
 const SectionOne = () => {
   return (
-    // تأكد إن الـ div ده ملوش position absolute
+    
     <div className="py-5" style={{  minHeight: '50vh' }}>
       <div className="container">
         <div className="row text-center">
@@ -11,7 +11,11 @@ const SectionOne = () => {
         <div className="row mt-5 d-flex justify-centent-between gx-5 text-dark">
             <div className="col-12 col-md-7 text-left">
             <h4> <span className="badge  text-danger bg p-3 fs-3">WHO AM I?</span></h4>
-                <p className="lead">"I am a passionate MERN Stack Developer based in Alexandria, Egypt. I specialize in building high-quality web applications using MongoDB, Express.js, React, and Node.js. My goal is to create seamless user experiences and efficient backend systems that solve real-world problems."</p>
+                <p className="lead">"I am a passionate Front-End & Mobile App Developer based in Alexandria, Egypt. 
+  I specialize in building high-quality web applications using React.js and Next.js, 
+  along with cross-platform mobile apps using React Native. 
+  I also have hands-on experience in building full-stack MERN applications. 
+  My goal is to create seamless user experiences that solve real-world problems."</p>
             </div>
              <div className="col-12 col-md-4 text-left">
             <h4> <span className="badge  text-danger bg p-3 fs-3">Personal Details</span></h4>

@@ -9,6 +9,8 @@ import img8 from '../img/assests/Screenshot 2026-03-11 040029.png'
 import img9 from '../img/assests/Screenshot 2026-05-10 001013.png'
 import img10 from '../img/assests/Screenshot 2026-06-25 230214.png'
 import img11 from '../img/assests/Screenshot 2026-08-22 142209.png'
+import img12 from '../img/assests/Screenshot 2026-09-14 220237.png'
+import img13 from '../img/assests/Screenshot 2026-09-15 190511.png'
 import { image } from 'framer-motion/client'
 
 const Projects = () => {
@@ -89,6 +91,22 @@ const Projects = () => {
     description:"Apllication build by React Native buy store with mobile application used nativewind libirary to improve UI desgin ",
     image:img11,
     demoLink: "https://lnkd.in/p/e6pkZF4b"
+  },
+  {
+    id:12,
+    title:"School Management Dashboard by Angular Framework",
+    description:"Comprehensive educational admin dashboard built with Angular for managing students, teachers, courses, and attendance with advanced filtering and dynamic tables.  Login -> Username: emilys | Password: emilyspass ",
+    image:img12,
+    demoLink: "https://ms1701240-cell.github.io/angular-dashboard-app/login",
+    
+  },
+  {
+    id: 13,
+title: "Octa Loans - Advanced Admin Dashboard",
+description: "A fully responsive loan management dashboard built with Angular, featuring comprehensive CRUD operations, interactive data tables with custom horizontal scrolling, and multi-language support (EN/AR).",
+image: img13,
+demoLink: "https://ms1701240-cell.github.io/workloan/loan",
+    
   }
 ];
   return (
@@ -106,6 +124,7 @@ const Projects = () => {
     <h5 className="card-title">{items.title}</h5>
     <p className="card-text">{items.description}</p>
     <a href={items.demoLink}  target='_blank' class="btn btn-dark">View Project</a>
+    
   </div>
 </div>
                     </div>

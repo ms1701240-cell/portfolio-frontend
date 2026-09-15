@@ -22,7 +22,7 @@ const Skill = () => {
         },
         { 
             name: 'TypeScript', 
-            iconClass: 'fa-brands fa-square-js', // تم تعديلها لتظهر بشكل صحيح
+            iconClass: 'fa-solid fa-code',
             color: '#3178C6',
             description: 'Adding static type safety to JavaScript for scalable applications.'
         },
@@ -55,6 +55,12 @@ const Skill = () => {
             iconClass: 'fa-solid fa-mobile-screen', // أو تقدر تستخدم أيقونة تانية مناسبة
             color: '#61DAFB',
             description: 'Building cross-platform mobile applications for Android and iOS using React.'
+        },
+         {
+            name: 'Angular',
+            iconClass: "fa-brands fa-angular", 
+            color: '#fb6161',
+            description: 'Developing scalable, single-page web applications using Angular'
         },
     ];
 

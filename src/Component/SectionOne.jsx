@@ -1,50 +1,56 @@
 const SectionOne = () => {
   return (
-    
+    <div className="bachground_section ">
     <div className="py-5" style={{  minHeight: '50vh' }}>
       <div className="container">
         <div className="row text-center">
             <div className="col-12">
-            <span className="badge rounded-pill text-danger bg p-3 fs-3">About Me</span>
+            <span className="badge rounded-pill text-white bg p-3 fs-3">About Me</span>
             </div> 
         </div>
         <div className="row mt-5 d-flex justify-centent-between gx-5 text-dark">
             <div className="col-12 col-md-7 text-left">
-            <h4> <span className="badge  text-danger bg p-3 fs-3">WHO AM I?</span></h4>
-                <p className="lead">"I am a passionate Front-End & Mobile App Developer based in Alexandria, Egypt. 
-  I specialize in building high-quality web applications using React.js and Next.js, 
-  along with cross-platform mobile apps using React Native. 
-  I also have hands-on experience in building full-stack MERN applications. 
-  My goal is to create seamless user experiences that solve real-world problems."</p>
+            <h4> <span className="badge  text-white bg p-3 fs-3">WHO AM I?</span></h4>
+                <div className="">
+    <span className="badge text-white bg p-4 fs-6 text-wrap text-start fw-normal lh-base d-block shadow-sm">
+      "I am a passionate Front-End & Mobile App Developer based in Alexandria, Egypt. 
+      I specialize in building high-quality web applications using React.js and Next.js, 
+      along with cross-platform mobile apps using React Native. 
+      I also have hands-on experience in building full-stack MERN applications. 
+      My goal is to create seamless user experiences that solve real-world problems."
+    </span>
+  </div>
             </div>
-             <div className="col-12 col-md-4 text-left">
-            <h4> <span className="badge  text-danger bg p-3 fs-3">Personal Details</span></h4>
+             <div className="col-12 col-md-5 mt-md-0 mt-5 text-left">
+            <h4 className=""> <span className="badge   text-white bg p-3 fs-3">Personal Details</span></h4>
                 
                    <ul className="list-unstyled mb-0">
+                    <span className="badge bg p-4">
             <li className="mb-3">
-                <strong className="text-dark">Name:</strong> 
+                <strong className="text-white">Name:</strong> 
                 <span className="ms-2 text-secondary">Mohamed Sayed</span>
             </li>
             <li className="mb-3">
-                <strong className="text-dark">Email:</strong> 
+                <strong className="text-white">Email:</strong> 
                 <span className="ms-2 text-danger">ms1701240@gmail.com</span>
             </li>
             <li className="mb-3">
-                <strong className="text-dark">Age:</strong> 
+                <strong className="text-white">Age:</strong> 
                 <span className="ms-2 text-secondary">23 Years</span>
             </li>
             <li className="mb-3">
-                <strong className="text-dark">Education:</strong> 
+                <strong className="text-white">Education:</strong> 
                 <span className="ms-2 text-secondary">Bachelor of Law</span>
             </li>
             <li className="mb-3">
-                <strong className="text-dark">From:</strong> 
+                <strong className="text-white">From:</strong> 
                 <span className="ms-2 text-secondary">Alexandria, Egypt</span>
             </li>
             <li>
-                <strong className="text-dark">Freelance:</strong> 
+                <strong className="text-white">Freelance:</strong> 
                 <span className="ms-2 text-success fw-bold">Available</span>
             </li>
+            </span>
         </ul>
                 
             </div>
@@ -52,20 +58,21 @@ const SectionOne = () => {
              <a 
   href="/portfolio-frontend/CV.pdf" 
   download="Mohamed_Sayed_CV.pdf" 
-  className="btn btn-danger btn-lg rounded-pill px-4 shadow-sm fw-bold mt-4 "
+  className="btn btn-primary btn-lg rounded-pill px-4 shadow-sm fw-bold mt-4 "
 >
   Download CV
   </a>
           <a 
   href="/portfolio-frontend/MohamedSayedRESUME.pdf" 
   download="MohamedSayedRESUME.pdf" 
-  className="btn btn-danger btn-lg rounded-pill px-2 shadow-sm fw-bold mt-4"
+  className="btn btn-primary btn-lg rounded-pill px-2 shadow-sm fw-bold mt-4"
 >
   Download Resume
   </a>
             </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -1,5 +1,8 @@
 .nav{
-  background-color: rgb(2, 2, 48);
+  background-color: #000a3e;
+}
+.header-section{
+  border-bottom: 2px solid #1b1b1b;
 }
 .menu{
   background-color: blue;
@@ -61,4 +64,11 @@
 .wgmail{
   width: 40px;
   margin-bottom: 13px;
+}
+.bachground_section{
+  background-image: url('./img/bachground_section.png');
+  background-size: cover;
+  background-position: center; /* يفضل إضافتها لضبط تمركز الصورة */
+  position: relative;
+  z-index: 100;
 }

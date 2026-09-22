@@ -67,7 +67,7 @@ const Skill = () => {
     return (
         <div className="skill py-5">
             <h4 className="text-center mb-5"> 
-                <span className="badge text-danger bg-dark border border-danger p-3 fs-3">MY SKILLS</span>
+                <span className="badge text-white bg  p-3 fs-3">MY SKILLS</span>
             </h4>
             <div className="container">
                 <div className="row g-4">

@@ -112,13 +112,13 @@ demoLink: "https://ms1701240-cell.github.io/workloan/loan",
   return (
     <div className="proj">
       <h4 className="text-center mb-5"> 
-                <span className="badge mt-5 text-danger bg-dark border border-danger p-3 fs-3">MY PROJECTS</span>
+                <span className="badge mt-5 text-white bg  p-3 fs-3">MY PROJECTS</span>
             </h4>
         <div className="container">
             <div className="row gy-3">
                 {projectsData.map((items,index)=>{
                     return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 100}>
-                        <div class="card bg-danger " >
+                        <div class="card bg " >
   <img src={items.image} class="card-img-top" alt="..."/>
   <div className="card-body h-100 border border-secondary shadow-lg">
     <h5 className="card-title">{items.title}</h5>

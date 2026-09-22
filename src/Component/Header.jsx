@@ -25,7 +25,7 @@ const Header = () => {
 // داخل Header.jsx
 if (init) {
     return (
-        <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', backgroundColor: '#a10d0d' }}>
+        <div className="header-section" style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', backgroundColor: 'white' }}>
             
             <Particles
                 id="tsparticles"
@@ -35,8 +35,8 @@ if (init) {
                     background: { enable: false }, // قفلنا الباك جراوند هنا عشان الأب هو اللي شايل اللون
                     fpsLimit: 60,
                     particles: {
-                        color: { value: "#ffffff" },
-                        links: { enable: true, color: "#ffffff", opacity: 0.3 },
+                        color: { value: "#1e1c1c" },
+                        links: { enable: true, color: "#121111", opacity: 0.3 },
                         move: { enable: true, speed: 2 },
                         number: { value: 50 },
                     },
@@ -46,12 +46,12 @@ if (init) {
             <div className="container d-flex align-items-center header-content" style={{ height: '110dvh' }}>
                 <div className="row align-items-center text-center w-100">
                     <div className="col-12 col-md-8 text-white mt-2"> {/* خليناها text-white عشان تبان */}
-                        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold',color: '#000933' }}>WELCOME</h1>
-                        <h1 style={{ fontSize: '3rem', fontWeight: 'bold',color: '#000933' }}>I'M Mohamed Sayed</h1>
-                        <div style={{ fontSize: '2.5rem', color: '#000933', fontWeight: '500' }}>
+                        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold',color: '#060057' }}>WELCOME</h1>
+                        <h1 style={{ fontSize: '3rem', fontWeight: 'bold',color: '#060057' }}>I'M MOHAMED SAYED</h1>
+                        <div style={{ fontSize: '2.5rem', color: '#060057', fontWeight: '500' }}>
                             <Typewriter 
                                 options={{ 
-                                    strings: ['Web Developer', 'Web Designer'], 
+                                    strings: ['WEB DEVELOPER', 'WEB DESIGNER'], 
                                     autoStart: true, 
                                     loop: true 
                                 }} 
@@ -64,7 +64,9 @@ if (init) {
                     </div>
                 </div>
             </div>
+    
         </div>
+        
     );
 }
     return <></>;

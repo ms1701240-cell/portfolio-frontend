@@ -11,102 +11,108 @@ import img10 from '../img/assests/Screenshot 2026-06-25 230214.png'
 import img11 from '../img/assests/Screenshot 2026-08-22 142209.png'
 import img12 from '../img/assests/Screenshot 2026-09-14 220237.png'
 import img13 from '../img/assests/Screenshot 2026-09-15 190511.png'
+import img14 from '../img/assests/Screenshot 2026-09-23 145335.png'
 import { image } from 'framer-motion/client'
 
 const Projects = () => {
-    const projectsData = [
+   const projectsData = [
   {
     id: 1,
     title: "CLOTHES MARKET",
-    description: 'Clothes market web-site by used vanila java script html css bootstrap',
-    image: img1, // اسم الصورة اللي هتحطها في فولدر الـ assets
+    description: 'A responsive e-commerce web application built using Vanilla JavaScript, HTML5, CSS3, and Bootstrap with dynamic product display.',
+    image: img1,
     demoLink: 'https://ms1701240-cell.github.io/clothes/'
   },
   {
     id: 2,
     title: "MARKET",
-    description: 'Market web site by used framework react.js',
+    description: 'A modern online store frontend developed with React.js, featuring component-based architecture and smooth user navigation.',
     image: img2,
     demoLink: "https://momen-storefront.vercel.app"
   },
    {
     id: 3,
     title: "Hero Section1",
-    description: 'used css html bootstrap',
+    description: 'A clean, modern landing page hero section designed with HTML, CSS, and Bootstrap, focusing on high-impact visual hierarchy.',
     image: img3,
     demoLink: "https://ms1701240-cell.github.io/Hero-section/"
   },
    {
     id:4 ,
     title: "Landing-Page",
-    description: 'used css html bootstrap',
+    description: 'A fully responsive portfolio landing page built using modern CSS, HTML, and Bootstrap grid systems.',
     image: img4,
     demoLink: 'https://ms1701240-cell.github.io/portofolio/'
   },
   {
     id:5 ,
     title: "Hero section2",
-    description: 'used css html bootstrap',
+    description: 'An alternative creative hero section layout built with clean HTML, CSS, and Bootstrap components.',
     image: img5,
     demoLink: 'https://ms1701240-cell.github.io/hero-sec/'
   },
   {
      id: 6,
     title: "School-tools web-site",
-    description: 'web-site by used frame work react.js',
+    description: 'An interactive school tools web platform developed using React.js for managing educational utilities seamlessly.',
     image: img6,
     demoLink: "https://ms1701240-cell.github.io/school/"
   },
    {
      id: 7,
-    title: "CRUD Opperator",
-    description: 'by used html css javascript',
+    title: "CRUD Operator",
+    description: 'A comprehensive data management system implementing full Create, Read, Update, and Delete operations using Vanilla JavaScript.',
     image: img7,
     demoLink: "https://ms1701240-cell.github.io/portofolio/crud%20schooltools/Crud2.html"
   },
    {
      id: 8,
     title: "Simple Store web-site by React.js",
-    description: '"A modern E-commerce platform built with React.js and Tailwind CSS',
+    description: 'A modern, responsive e-commerce platform built with React.js and Tailwind CSS, featuring sleek UI components and clean layout.',
     image: img8,
     demoLink: "https://ms1701240-cell.github.io/stylestore/#/home"
   },
   {
-    id:9,
-    title:"KORACOM WEB-SITE",
-    description:"web-site by next.js for football news ",
-    image:img9,
+    id: 9,
+    title: "KORACOM WEB-SITE",
+    description: 'A real-time football news and match-tracking web application built with Next.js for optimized performance and SEO.',
+    image: img9,
     demoLink: "https://kora-gamma-three.vercel.app"
   },
    {
-    id:10,
-    title:"E-Commerce Store WEB-SITE",
-    description:"web-site by next.js  ",
-    image:img10,
+    id: 10,
+    title: "E-Commerce Store WEB-SITE",
+    description: 'An advanced full-featured e-commerce web application powered by Next.js, featuring server-side rendering and fast loading times.',
+    image: img10,
     demoLink: "https://next-store-inky-tau.vercel.app"
   },
    {
-    id:11,
-    title:"E-Commerce Store Application By React Native",
-    description:"Apllication build by React Native buy store with mobile application used nativewind libirary to improve UI desgin ",
-    image:img11,
+    id: 11,
+    title: "E-Commerce Store Application By React Native",
+    description: 'A cross-platform mobile shopping app built with React Native and NativeWind, offering a seamless and native UI/UX design experience.',
+    image: img11,
     demoLink: "https://lnkd.in/p/e6pkZF4b"
   },
   {
-    id:12,
-    title:"School Management Dashboard by Angular Framework",
-    description:"Comprehensive educational admin dashboard built with Angular for managing students, teachers, courses, and attendance with advanced filtering and dynamic tables.  Login -> Username: emilys | Password: emilyspass ",
-    image:img12,
+    id: 12,
+    title: "School Management Dashboard by Angular Framework",
+    description: 'Comprehensive educational admin dashboard built with Angular for managing students, teachers, courses, and attendance with advanced filtering and dynamic tables.',
+    image: img12,
     demoLink: "https://ms1701240-cell.github.io/angular-dashboard-app/login",
-    
   },
   {
     id: 13,
-title: "Octa Loans - Advanced Admin Dashboard",
-description: "A fully responsive loan management dashboard built with Angular, featuring comprehensive CRUD operations, interactive data tables with custom horizontal scrolling, and multi-language support (EN/AR).",
-image: img13,
-demoLink: "https://ms1701240-cell.github.io/workloan/loan",
-    
+    title: "Octa Loans - Advanced Admin Dashboard",
+    description: "A fully responsive loan management dashboard built with Angular, featuring comprehensive CRUD operations, interactive data tables, and multi-language support (EN/AR).",
+    image: img13,
+    demoLink: "https://ms1701240-cell.github.io/workloan/loan",
+  },
+  {
+     id: 14,
+    title: "teercom Application Store",
+    description:"A modern e-commerce mobile app built with React Native & NativeWind, featuring cart, map tracking, and MongoDB.",
+    image: img14,
+    demoLink: "https://lnkd.in/p/esuN8_jB",
   }
 ];
   return (
@@ -117,7 +123,7 @@ demoLink: "https://ms1701240-cell.github.io/workloan/loan",
         <div className="container">
             <div className="row gy-3">
                 {projectsData.map((items,index)=>{
-                    return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 100}>
+                    return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 50}>
                         <div class="card bg " >
   <img src={items.image} class="card-img-top" alt="..."/>
   <div className="card-body h-100 border border-secondary shadow-lg">

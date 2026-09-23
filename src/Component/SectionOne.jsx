@@ -39,8 +39,12 @@ const SectionOne = () => {
                 <span className="ms-2 text-secondary">23 Years</span>
             </li>
             <li className="mb-3">
+                <strong className="text-white">Graduate:</strong> 
+                <span className="ms-2 text-secondary">Alexandria University.</span>
+            </li>
+             <li className="mb-3">
                 <strong className="text-white">Education:</strong> 
-                <span className="ms-2 text-secondary">Bachelor of Law</span>
+                <span className="ms-2 text-secondary">NTI/ITIDA/Nile University </span>
             </li>
             <li className="mb-3">
                 <strong className="text-white">From:</strong> 

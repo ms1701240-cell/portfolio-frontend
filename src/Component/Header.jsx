@@ -1,75 +1,92 @@
 
 import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; 
-import Typewriter from 'typewriter-effect';
 import myimage from '../img/assests/11840.jpg';
-const Header = () => {
-    
-    const [init, setInit] = useState(false);
 
-    // المحرك بيشتغل مرة واحدة بس عند بداية تشغيل الموقع
+const roles = ['Front-End Developer', 'Angular Developer', 'React Developer', 'React Native Developer'];
+
+const Header = () => {
+    const [reduceMotion, setReduceMotion] = useState(() =>
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    );
+    const [displayedRole, setDisplayedRole] = useState('');
+
     useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
-        }).then(() => {
-            setInit(true);
-        });
+        const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const updateMotionPreference = () => setReduceMotion(motionPreference.matches);
+
+        updateMotionPreference();
+        motionPreference.addEventListener('change', updateMotionPreference);
+        return () => motionPreference.removeEventListener('change', updateMotionPreference);
     }, []);
 
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
+    useEffect(() => {
+        let roleIndex = 0;
+        let characterCount = 0;
+        let isDeleting = false;
+        let pauseUntil = 0;
 
-    // داخل Header.jsx
-// داخل Header.jsx
-if (init) {
+        if (reduceMotion) {
+            setDisplayedRole(roles[roleIndex]);
+            const timer = window.setInterval(() => {
+                roleIndex = (roleIndex + 1) % roles.length;
+                setDisplayedRole(roles[roleIndex]);
+            }, 2500);
+            return () => window.clearInterval(timer);
+        }
+
+        const timer = window.setInterval(() => {
+            const currentRole = roles[roleIndex];
+
+            if (!isDeleting && characterCount === currentRole.length) {
+                if (!pauseUntil) pauseUntil = Date.now() + 1200;
+                if (Date.now() >= pauseUntil) {
+                    isDeleting = true;
+                    pauseUntil = 0;
+                }
+                return;
+            }
+
+            if (isDeleting && characterCount === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            } else {
+                characterCount += isDeleting ? -1 : 1;
+                setDisplayedRole(currentRole.slice(0, characterCount));
+            }
+        }, 65);
+
+        return () => window.clearInterval(timer);
+    }, [reduceMotion]);
+
     return (
-        <div className="header-section" style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', backgroundColor: 'white' }}>
-            
-            <Particles
-                id="tsparticles"
-                className="particles-container" // استخدمنا الكلاس هنا
-                options={{
-                    fullScreen: { enable: false },
-                    background: { enable: false }, // قفلنا الباك جراوند هنا عشان الأب هو اللي شايل اللون
-                    fpsLimit: 60,
-                    particles: {
-                        color: { value: "#1e1c1c" },
-                        links: { enable: true, color: "#121111", opacity: 0.3 },
-                        move: { enable: true, speed: 2 },
-                        number: { value: 50 },
-                    },
-                }}
-            />
-
-            <div className="container d-flex align-items-center header-content" style={{ height: '110dvh' }}>
-                <div className="row align-items-center text-center w-100">
-                    <div className="col-12 col-md-8 text-white mt-2"> {/* خليناها text-white عشان تبان */}
-                        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold',color: '#060057' }}>WELCOME</h1>
-                        <h1 style={{ fontSize: '3rem', fontWeight: 'bold',color: '#060057' }}>I'M MOHAMED SAYED</h1>
-                        <div style={{ fontSize: '2.5rem', color: '#060057', fontWeight: '500' }}>
-                            <Typewriter 
-                                options={{ 
-                                    strings: ['WEB DEVELOPER', 'WEB DESIGNER'], 
-                                    autoStart: true, 
-                                    loop: true 
-                                }} 
-                            />
+        <section className="header-section">
+            <div className="container header-content">
+                <div className="row align-items-center w-100">
+                    <div className="col-12 col-md-7 header-copy">
+                        <p className="header-eyebrow ل">WEB & MOBILE DEVELOPER</p>
+                        <h1 className="header-title">Hi, I'm <span>Mohamed Sayed</span></h1>
+                        <p className="header-role" aria-live="polite">
+                            <span className="header-role-label">
+ </span>
+                            <span className="header-role-text">{displayedRole}</span>
+                            <span className="typewriter-caret" aria-hidden="true" />
+                        </p>
+                        <p className="header-description">
+                           I help businesses and entrepreneurs build modern,
+                             responsive web and mobile applications.
+                        </p>
+                        <div className="header-actions">
+                            <a className="header-button header-button-primary" href="#project">Explore my work</a>
+                            <a className="header-button header-button-secondary" href="#contact">Let's work together</a>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4">
-                         <img src={myimage} className="img-fluid im" 
-                              style={{borderRadius:'30px', border:'4px solid white', boxShadow:'0 10px 30px rgba(0,0,0,0.5)'}} />
+                    <div className="col-12 col-md-5 header-portrait-wrap">
+                        <img src={myimage} className="img-fluid im header-portrait" alt="Mohamed Sayed, front-end developer" />
                     </div>
                 </div>
             </div>
-    
-        </div>
-        
+        </section>
     );
-}
-    return <></>;
 }
 
 export default Header;

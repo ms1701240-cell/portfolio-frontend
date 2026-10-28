@@ -13,11 +13,7 @@ const SectionOne = () => {
             <h4> <span className="badge  text-white bg p-3 fs-3">WHO AM I?</span></h4>
                 <div className="">
     <span className="badge text-white bg p-4 fs-6 text-wrap text-start fw-normal lh-base d-block shadow-sm">
-      "I am a passionate Front-End & Mobile App Developer based in Alexandria, Egypt. 
-      I specialize in building high-quality web applications using React.js and Next.js, 
-      along with cross-platform mobile apps using React Native. 
-      I also have hands-on experience in building full-stack MERN applications. 
-      My goal is to create seamless user experiences that solve real-world problems."
+     I'm Mohamed Sayed, a Front-End Developer and Mobile App Developer with experience in React.js, Next.js, Angular, and React Native. I help businesses and entrepreneurs build modern, responsive web and mobile applications that combine performance, usability, and clean design.
     </span>
   </div>
             </div>

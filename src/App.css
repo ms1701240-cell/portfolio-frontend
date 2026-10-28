@@ -324,11 +324,13 @@
   position: relative;
   z-index: 100;
 }
-/* تثبيت أبعاد صور الكروت لتكون متساوية ومنتظمة */
 .proj .card-img-top {
-  height: 220px;          /* حدد الارتفاع المناسب لكل الصور */
-  object-fit: cover;      /* قص الصورة واحتوائها داخل المساحة بدون تشويه */
-  object-position: center;/* ضبط تمركز الصورة في المنتصف */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f4f6f8;
 }
 
 /* التأكد من أن جميع الكروت تأخذ نفس الارتفاع بالكامل */

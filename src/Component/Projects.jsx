@@ -16,63 +16,7 @@ import { image } from 'framer-motion/client'
 
 const Projects = () => {
    const projectsData = [
-  {
-    id: 1,
-    title: "CLOTHES MARKET",
-    description: 'A responsive e-commerce web application built using Vanilla JavaScript, HTML5, CSS3, and Bootstrap with dynamic product display.',
-    image: img1,
-    demoLink: 'https://ms1701240-cell.github.io/clothes/'
-  },
-  {
-    id: 2,
-    title: "MARKET",
-    description: 'A modern online store frontend developed with React.js, featuring component-based architecture and smooth user navigation.',
-    image: img2,
-    demoLink: "https://momen-storefront.vercel.app"
-  },
-   {
-    id: 3,
-    title: "Hero Section1",
-    description: 'A clean, modern landing page hero section designed with HTML, CSS, and Bootstrap, focusing on high-impact visual hierarchy.',
-    image: img3,
-    demoLink: "https://ms1701240-cell.github.io/Hero-section/"
-  },
-   {
-    id:4 ,
-    title: "Landing-Page",
-    description: 'A fully responsive portfolio landing page built using modern CSS, HTML, and Bootstrap grid systems.',
-    image: img4,
-    demoLink: 'https://ms1701240-cell.github.io/portofolio/'
-  },
-  {
-    id:5 ,
-    title: "Hero section2",
-    description: 'An alternative creative hero section layout built with clean HTML, CSS, and Bootstrap components.',
-    image: img5,
-    demoLink: 'https://ms1701240-cell.github.io/hero-sec/'
-  },
-  {
-     id: 6,
-    title: "School-tools web-site",
-    description: 'An interactive school tools web platform developed using React.js for managing educational utilities seamlessly.',
-    image: img6,
-    demoLink: "https://ms1701240-cell.github.io/school/"
-  },
-   {
-     id: 7,
-    title: "CRUD Operator",
-    description: 'A comprehensive data management system implementing full Create, Read, Update, and Delete operations using Vanilla JavaScript.',
-    image: img7,
-    demoLink: "https://ms1701240-cell.github.io/portofolio/crud%20schooltools/Crud2.html"
-  },
-   {
-     id: 8,
-    title: "Simple Store web-site by React.js",
-    description: 'A modern, responsive e-commerce platform built with React.js and Tailwind CSS, featuring sleek UI components and clean layout.',
-    image: img8,
-    demoLink: "https://ms1701240-cell.github.io/stylestore/#/home"
-  },
-  {
+    {
     id: 9,
     title: "KORACOM WEB-SITE",
     description: 'A real-time football news and match-tracking web application built with Next.js for optimized performance and SEO.',
@@ -113,7 +57,53 @@ const Projects = () => {
     description:"A modern e-commerce mobile app built with React Native & NativeWind, featuring cart, map tracking, and MongoDB.",
     image: img14,
     demoLink: "https://lnkd.in/p/esuN8_jB",
-  }
+  },
+
+  {
+    id: 1,
+    title: "CLOTHES MARKET",
+    description: 'A responsive e-commerce web application built using Vanilla JavaScript, HTML5, CSS3, and Bootstrap with dynamic product display.',
+    image: img1,
+    demoLink: 'https://ms1701240-cell.github.io/clothes/'
+  },
+  {
+    id: 2,
+    title: "MARKET",
+    description: 'A modern online store frontend developed with React.js, featuring component-based architecture and smooth user navigation.',
+    image: img2,
+    demoLink: "https://momen-storefront.vercel.app"
+  },
+   
+   {
+    id:4 ,
+    title: "Landing-Page",
+    description: 'A fully responsive portfolio landing page built using modern CSS, HTML, and Bootstrap grid systems.',
+    image: img4,
+    demoLink: 'https://ms1701240-cell.github.io/portofolio/'
+  },
+  
+  {
+     id: 6,
+    title: "School-tools web-site",
+    description: 'An interactive school tools web platform developed using React.js for managing educational utilities seamlessly.',
+    image: img6,
+    demoLink: "https://ms1701240-cell.github.io/school/"
+  },
+   {
+     id: 7,
+    title: "CRUD Operator",
+    description: 'A comprehensive data management system implementing full Create, Read, Update, and Delete operations using Vanilla JavaScript.',
+    image: img7,
+    demoLink: "https://ms1701240-cell.github.io/portofolio/crud%20schooltools/Crud2.html"
+  },
+   {
+     id: 8,
+    title: "Simple Store web-site by React.js",
+    description: 'A modern, responsive e-commerce platform built with React.js and Tailwind CSS, featuring sleek UI components and clean layout.',
+    image: img8,
+    demoLink: "https://ms1701240-cell.github.io/stylestore/#/home"
+  },
+  
 ];
   return (
     <div className="proj">

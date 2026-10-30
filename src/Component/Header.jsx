@@ -63,8 +63,8 @@ const Header = () => {
             <div className="container header-content">
                 <div className="row align-items-center w-100">
                     <div className="col-12 col-md-7 header-copy">
-                        <p className="header-eyebrow ل">WEB & MOBILE DEVELOPER</p>
-                        <h1 className="header-title">Hi, I'm <span>Mohamed Sayed</span></h1>
+                        <p className="header-eyebrow ">WEB & MOBILE DEVELOPER</p>
+                        <h1 className="header-title">Hi,I'm <span>Mohamed Sayed</span></h1>
                         <p className="header-role" aria-live="polite">
                             <span className="header-role-label">
  </span>

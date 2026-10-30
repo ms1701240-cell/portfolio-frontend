@@ -131,6 +131,7 @@
 }
 .header-title span {
   color: #66e0d1;
+  white-space: nowrap;
 }
 .header-role {
   min-height: 1.7em;

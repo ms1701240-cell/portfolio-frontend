@@ -283,6 +283,7 @@
   .header-portrait {
     width: min(54%, 190px);
     border-radius: 18px;
+    transform: translateY(10px);
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -14,8 +14,6 @@ import img13 from '../img/assests/Screenshot 2026-09-15 190511.png'
 import img14 from '../img/assests/Screenshot 2026-09-23 145335.png'
 
 import { useEffect, useState } from 'react'
-import axios from 'axios';
-
 const Projects = () => {
    const projectsData = [
     {
@@ -112,10 +110,31 @@ const[projects,setproject]=useState(projectsData)
 useEffect(()=>{
   const fetchprojects=async()=>{
 try{
-const res=await axios.get(`${API_BASE}/api/projects`);
-setproject([...res.data,...projectsData])
+const res=await fetch(`${API_BASE}/api/projects`, {
+  headers: { Accept: 'application/json' }
+});
+if (!res.ok) {
+  throw new Error(`API returned ${res.status} ${res.statusText}`);
+}
+
+const payload=await res.json();
+const apiProjects=Array.isArray(payload)
+  ? payload
+  : Array.isArray(payload.data)
+    ? payload.data
+    : [];
+
+const normalizedProjects=apiProjects.map((project)=>({
+  ...project,
+  title: project.title || project.name || 'Untitled Project',
+  description: project.description || '',
+  image: project.image || project.image_url || project.imageUrl || '',
+  demoLink: project.demoLink || project.demo_link || project.link || '#'
+}));
+
+setproject([...normalizedProjects,...projectsData])
 }catch(err){
-  console.error('Error fetching projects:', err);
+  console.error('Unable to fetch projects from the API:', err);
 }
   };
   fetchprojects();
@@ -131,9 +150,13 @@ setproject([...res.data,...projectsData])
                     return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 50}>
                         <div className="card bg " >
   <img src={
-    typeof items.image === 'string' && items.image.startsWith('projects/')
-      ? `${API_BASE}/storage/${items.image}`
-      : items.image
+    typeof items.image === 'string' && /^https?:\/\//i.test(items.image)
+      ? items.image
+      : typeof items.image === 'string' && items.image.startsWith('storage/')
+        ? `${API_BASE}/${items.image}`
+        : typeof items.image === 'string' && items.image.startsWith('projects/')
+          ? `${API_BASE}/storage/${items.image}`
+          : items.image
   }
   className="card-img-top"
   alt={items.title}/>

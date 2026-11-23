@@ -129,7 +129,7 @@ setproject([...res.data,...projectsData])
             <div className="row gy-3">
                 {projects.map((items,index)=>{
                     return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 50}>
-                        <div class="card bg " >
+                        <div className="card bg " >
   <img src={
     typeof items.image === 'string' && items.image.startsWith('projects/')
       ? `${API_BASE}/storage/${items.image}`
@@ -140,7 +140,7 @@ setproject([...res.data,...projectsData])
   <div className="card-body h-100 border border-secondary shadow-lg">
     <h5 className="card-title">{items.title}</h5>
     <p className="card-text">{items.description}</p>
-    <a href={items.demoLink}  target='_blank' class="btn btn-dark">View Project</a>
+    <a href={items.demoLink}  target='_blank' className="btn btn-dark">View Project</a>
     
   </div>
 </div>

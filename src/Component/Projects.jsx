@@ -12,7 +12,9 @@ import img11 from '../img/assests/Screenshot 2026-08-22 142209.png'
 import img12 from '../img/assests/Screenshot 2026-09-14 220237.png'
 import img13 from '../img/assests/Screenshot 2026-09-15 190511.png'
 import img14 from '../img/assests/Screenshot 2026-09-23 145335.png'
-import { image } from 'framer-motion/client'
+
+import { useEffect, useState } from 'react'
+import axios from 'axios';
 
 const Projects = () => {
    const projectsData = [
@@ -105,6 +107,19 @@ const Projects = () => {
   },
   
 ];
+const API_BASE = 'https://porfoliod.free.nf';
+const[projects,setproject]=useState(projectsData)
+useEffect(()=>{
+  const fetchprojects=async()=>{
+try{
+const res=await axios.get(`${API_BASE}/api/projects`);
+setproject([...res.data,...projectsData])
+}catch(err){
+  console.error('Error fetching projects:', err);
+}
+  };
+  fetchprojects();
+},[])
   return (
     <div className="proj">
       <h4 className="text-center mb-5"> 
@@ -112,10 +127,16 @@ const Projects = () => {
             </h4>
         <div className="container">
             <div className="row gy-3">
-                {projectsData.map((items,index)=>{
+                {projects.map((items,index)=>{
                     return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 50}>
                         <div class="card bg " >
-  <img src={items.image} class="card-img-top" alt="..."/>
+  <img src={
+    typeof items.image === 'string' && items.image.startsWith('projects/')
+      ? `${API_BASE}/storage/${items.image}`
+      : items.image
+  }
+  className="card-img-top"
+  alt={items.title}/>
   <div className="card-body h-100 border border-secondary shadow-lg">
     <h5 className="card-title">{items.title}</h5>
     <p className="card-text">{items.description}</p>

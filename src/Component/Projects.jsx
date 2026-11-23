@@ -105,7 +105,8 @@ const Projects = () => {
   },
   
 ];
-const API_BASE = 'https://porfoliod.free.nf';
+const API_BASE = 'https://black-art-a705portfolio-api-proxy.ms1701240.workers.dev';
+const STORAGE_BASE = 'https://porfoliod.free.nf';
 const[projects,setproject]=useState(projectsData)
 useEffect(()=>{
   const fetchprojects=async()=>{
@@ -149,17 +150,19 @@ setproject([...normalizedProjects,...projectsData])
                 {projects.map((items,index)=>{
                     return <div className="col-12 col-md-6" key={index} data-aos='fade-up' data-aos-delay={index * 50}>
                         <div className="card bg " >
-  <img src={
+ <img
+  src={
     typeof items.image === 'string' && /^https?:\/\//i.test(items.image)
       ? items.image
       : typeof items.image === 'string' && items.image.startsWith('storage/')
-        ? `${API_BASE}/${items.image}`
+        ? `${STORAGE_BASE}/${items.image}`
         : typeof items.image === 'string' && items.image.startsWith('projects/')
-          ? `${API_BASE}/storage/${items.image}`
+          ? `${STORAGE_BASE}/storage/${items.image}`
           : items.image
   }
   className="card-img-top"
-  alt={items.title}/>
+  alt={items.title}
+/>
   <div className="card-body h-100 border border-secondary shadow-lg">
     <h5 className="card-title">{items.title}</h5>
     <p className="card-text">{items.description}</p>
